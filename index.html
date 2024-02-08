@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nittya's portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <img height="100px" width="200px" src="images/logo3.png" class="logo" alt="">
+                <ul id="sidebar" >
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                    <i class="fa-solid fas fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i id="hide-three-line"class="fa-solid fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- --------home--------------- -->
+        <div class="home">
+            <div class="header-text">
+
+                <h2>Hi, My name is <br><span class="span1"> Nittya Gopal Baidya</span> <br>Currently I am <span
+                        class="span2" style=" color: blue;" id="element"></span> </h2>
+            </div>
+            <div class="profile-image">
+                <img id="my_img" src="images/logo8.png" alt="">
+            </div>
+        </div>
+        <!-- --------about section---------- -->
+        <div id="about">
+            <div class="container">
+                <h1 ><u>About Me</u></h1>
+                <div class="about-desc">
+                    <p>I’m currently pursuing MCA at Jawaharlal Nehru University. I have done <br>BSc in Computer
+                        Science Honours from Ananda Chandra College . <br> I am junior frontent developer and familer
+                        with frontent technologies like HTML, CSS and JavaScript and also passionate about DSA problem
+                        solving . </p>
+                        <button type="button" class="btn"><a href="resume.pdf" downlod class="btn"> Resume </a></button>
+                        
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------------Projects------------------ -->
+        <div id="project">
+            <div class="container">
+                <h1><u>Projects</u></h1>
+                <div class="project-list">
+                        <div>
+                            <img style="height: 200px ;width: 200px;;" src="images/clouds-and-sun.png" alt="">
+                            <h2 style="font-size: 30px;margin-bottom: 15px;">Weather App</h2>
+                            <p style="font-size:16px;font-family: 'Oxygen', sans-serif;">The weather application will provide users with real-time weather information, <br> forecasts, and other weather-related data, which can help them make better <br> decisions about their day-to-day activities.</p>
+                            <!-- <a class="btn" style="color: blue; font-size: 15px;" href="#">Explore</a> -->
+                            <button type="button" class="btn btn3"><a href="https://nittya-gopal-baidya.github.io/weather-today/">Explore</a></button>
+                        </div>
+                        <!-- future projects will be added here -->
+                </div>
+            </div>
+        </div>
+        <!-- -------------------Skill Section----------------------- -->
+        <div id="skills">
+            <div class="container">
+                <h1><u>Skills</u></h1>
+                <div class="skills-list">
+                        <div class="html">
+                            <img style="height: 100px ;width: 100px;;" src="images/html.png" alt="" >
+                            <h2>HTML</h2>
+                        </div>
+                        <div class="css">
+                            <img style="height: 100px ;width: 100px;;" src="images/css.png" alt="">
+                            <h2> CSS</h2>
+                        </div>
+                        <div class="js">
+                            <img style="height: 100px ;width: 150px;;" src="images/js.png" alt="">
+                            <h2>JavaScript</h2>
+                        </div>
+                        <div class="java">
+                            <img style="height: 100px ;width: 150px;;" src="images/java.png" alt="">
+                            <h2>Java</h2>
+                        </div>
+                        <!-- future skill will be added here -->
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------contact-------------------------- -->
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-square-envelope"></i>nittya.jnu@gmail.com</p>
+                        <!-- <p>865xxxxxxx</p> -->
+                        <p>My linked in profile <a href="https://www.linkedin.com/in/nittya-gopal-baidya/"><i class="fa-brands fa-linkedin"></i></a> given and if you have any query then SUBMIT through form given bellow </p>
+                            
+                        <div class="social-media">
+                            <!-- <p>My linked in profile given bellow and if you have any query then SUBMIT through form given bellow </p>
+                            <a href="https://www.linkedin.com/in/nittya-gopal-baidya/"><img style="height: 30px;width: 35px;" src="images/linked-in.png" alt=""></a> -->
+                            <!-- <a href="https://mail.google.com/mail/u/mrnittya2003@gmail.com"><img style="height: 25px;width: 42px;" src="images/gmail.png" alt=""></a> -->
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder=" Enter name here " required>
+                            <input type="email" name="Email" placeholder="Enter email here " required>
+                            <textarea name="Message"   rows="6" placeholder=" Enter your message here"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+
+                        </form>
+                        <span id="succ_mess"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="copyright">
+    <p>Copyright © 2024 <i class="fa-solid fa-code"></i>Developed by Nittya. </p>
+</div>
+
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#element', {
+                strings: ['a Frontent Developer', 'learning Data Structures Algorithm'],
+                loop: true,
+                typeSpeed: 70,
+                backSpeed: 80,
+            });
+        </script>
+        <script src="https://kit.fontawesome.com/343e46786f.js" crossorigin="anonymous"></script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwDDtFRGa654j4cUf-_O4xPoA5qOBLG4bHhG40hjkilHhBVXYZDPCm0UtwXCLhkxn-nyw/exec'
+            const form = document.forms['submit-to-google-sheet']
+          const succ_mess=document.getElementById("succ_mess");
+
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {succ_mess.innerHTML="Submitted :)"
+                setTimeout(function(){
+                    succ_mess.innerHTML=""
+                },4000)
+                form.reset()
+            })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+          <script>
+            var sidemenu=document.getElementById("sidebar");
+            // var hide=document.getElementById("hide-three-line");
+            function openmenu(){
+                sidemenu.style.right="0px";
+                // hide.style.right="-350px"
+
+            }
+            function closemenu(){
+                sidemenu.style.right="-125px";
+                // hide.style.right="-260px"
+                
+            }
+          </script>
+    </main>
+
+</body>
+
+</html>
